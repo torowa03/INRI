@@ -1,0 +1,39 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BibleStandard.Parts"
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             xmlns:InriControls="clr-namespace:Inri.Controls;assembly=Inri.Controls" 
+             x:Class="BibleStandard.Pages.Search.SearchPage4"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="500">
+    <UserControl.Resources>
+        <BitmapImage x:Key="copy" UriSource="../../Resources/Icons/copy.png" />
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="453*"/>
+            <ColumnDefinition Width="42"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="171*"/>
+        </Grid.RowDefinitions>
+        <InriControls:TextInputBox x:Name="txtWord"  HorizontalAlignment="Left" Height="30" Margin="24,21,0,0" VerticalAlignment="Top" Width="175"/>
+        <Button x:Name="btnSearch"  Content="検索" HorizontalAlignment="Left" Margin="216,20,0,0" VerticalAlignment="Top" Width="74" Click="btnSearch_Click" FontSize="16" Height="30"/>
+        <!--<ScrollViewer Name="scrollView1" VerticalScrollBarVisibility="Auto" Grid.Row="1">
+            <local:SearchableTextControl x:Name="txtResult" IsHighlight="True" BorderBrush="Gray" BorderThickness="0"  Margin="10" FontSize="16" />
+        </ScrollViewer>-->
+        <Label x:Name="lblMessage" Content="" HorizontalAlignment="Left" Margin="305,23,0,8" VerticalAlignment="Center" Width="125" FontSize="16" Height="29"/>
+        <ScrollViewer x:Name="scrollView1" VerticalScrollBarVisibility="Auto" Grid.Row="1" Grid.ColumnSpan="2">
+            <StackPanel x:Name="stackPanel1" Grid.Row="1" />
+        </ScrollViewer>
+        <mui:ModernProgressRing x:Name="progressRing" IsActive="False" Height="72" Margin="202,-18,171,6" Width="80" />
+        <InriControls:BusyAnimation x:Name="busyAnimation"  Grid.Row="1" Visibility="Hidden" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnCopy" ToolTip="コピー" Grid.Column="1" HorizontalAlignment="Left"  Margin="2,15,1,15" Cursor="Hand" >
+            <Label Content="2" FontFamily="Marlett" FontSize="18.667" Width="20" Margin="-10,0,0,0" />
+        </Button>
+    </Grid>
+</UserControl>

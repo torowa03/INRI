@@ -1,0 +1,53 @@
+﻿2015/5/1 VS2010版に以降　開発中止　
+
+
+UI
+・フォームのサイズを保存
+・検索キーワードの履歴を保存
+・前回の状態を保存
+・検索処理をバックグラウンド処理
+・画像の拡大縮小
+
+
+
+
+・Book
+・Chapter
+・Verse
+
+
+
+
+
+
+■First Floor Software
+http://firstfloorsoftware.com/
+
+■Modern UI for WPF
+https://mui.codeplex.com/wikipage?title=My%20first%20Modern%20UI%20app
+
+■WPFアプリの外観をストア アプリ風に ～Modern UI for WPF～
+http://sygh.hatenadiary.jp/entry/2014/06/21/001929
+
+■Modern UI Icons
+http://modernuiicons.com/
+
+
+■WPFライブラリ
+http://qiita.com/inabe49/items/e47d0afffed2875ad371
+
+■アイコンの代わりに文字フォントを使う
+Marlettフォント
+☑、×　など
+
+
+■SVG画像表示
+Dataの部分がSVGパスストロークデータ
+<Canvas xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="svg2997" Width="744.09448" Height="1052.3622" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+  <Canvas x:Name="layer1">
+    <Path Fill="#FFCCCCCC" Stroke="#FF000000" StrokeThickness="1.34377062" StrokeMiterLimit="4" x:Name="path3007" Data="M372.58272,134.72445C167.96301,134.72445 2.06820310000001,300.58818 2.06820310000001,505.20789 2.06820310000001,709.8276 167.96301,875.72241 372.58272,875.72241 577.20243,875.72241 743.06616,709.8276 743.06616,505.20789 743.06616,300.58818 577.20243,134.72445 372.58272,134.72445z M280.73888,251.77484L455.94149,251.77484 455.94149,413.70594 628.16035,413.70594 628.16035,588.97071 455.94149,588.97071 455.94149,773.71514 280.73888,773.71514 280.73888,588.97071 106.22005,588.97071 106.22005,413.70594 280.73888,413.70594 280.73888,251.77484z" />
+  </Canvas>
+</Canvas>
+
+
+■検索結果が多すぎると処理できなくなる

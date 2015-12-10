@@ -1,0 +1,66 @@
+﻿<mui:ModernWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+        xmlns:Controls="clr-namespace:Inri.Controls;assembly=Inri.Controls" x:Class="BibleStandard.MainWindow"
+        Title="Bible Standard BETA" IsTitleVisible="True"
+        LogoData="M 38 14.25 C 51.1168 14.25 61.75 24.8832 61.75 38 C 61.75 51.1168 51.1168 61.75 38 61.75 C 24.8832 61.75 14.25 51.1168 14.25 38 C 14.25 24.8832 24.8832 14.25 38 14.25 Z M 26.858 24.5124 L 24.5124 35.0679 C 24.5124 35.0679 26.858 33.8951 31.5494 33.8951 C 33.3617 33.8951 34.999 34.7702 36.5964 35.8443 L 39.9458 24.2953 C 38.4627 23.141 36.7635 22.1667 33.8951 22.1667 C 28.0309 22.1667 26.858 24.5124 26.858 24.5124 Z M 47.9691 28.0309 C 45.0518 28.0309 43.3439 27.023 41.8426 25.8429 L 38.5446 37.215 C 40.4177 38.541 42.3123 39.7593 44.4506 39.7593 C 49.142 39.7593 51.4877 37.4136 51.4877 37.4136 L 55.0062 25.6852 C 55.0062 25.6852 53.8333 28.0309 47.9691 28.0309 Z M 23.3395 38.5864 L 20.9938 49.142 C 20.9938 49.142 23.3395 47.9691 28.0309 47.9691 C 29.6648 47.9691 31.1564 48.6805 32.6048 49.6076 L 35.9648 38.0221 C 34.5847 37.0261 32.9518 36.2408 30.3766 36.2408 C 24.5124 36.2408 23.3395 38.5864 23.3395 38.5864 Z M 44.4506 42.1049 C 41.234 42.1049 39.4877 40.8797 37.8676 39.5493 L 34.5592 50.9568 C 36.5858 52.4041 38.616 53.8333 40.9321 53.8333 C 45.6234 53.8333 47.9691 51.4877 47.9691 51.4877 L 51.4877 39.7593 C 51.4877 39.7593 50.3148 42.1049 44.4506 42.1049 Z"    
+        Width="{Binding Main_Width, Source={StaticResource settings}}"
+        Height="{Binding Main_Height, Source={StaticResource settings}}"
+        Top="{Binding Main_Top, Source={StaticResource settings}}"
+        Left="{Binding Main_Left, Source={StaticResource settings}}"
+        ContentSource="/Pages/Home.xaml" Closing="ModernWindow_Closing" Icon="Resources/Icons/bible.ico">
+<!--
+ロゴデータはSVGになっている
+http://modernuiicons.com/
+から画像を保存して、d=""の中身を　LogoDataの内容と置き換える
+    -->
+    
+    
+    <mui:ModernWindow.MenuLinkGroups>
+        <mui:LinkGroup DisplayName="ホーム">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="お知らせ" Source="/Pages/Home.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="聖書">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="しおり1" Source="/Pages/Books/BookReading.xaml" />
+                <mui:Link DisplayName="しおり2" Source="/Pages/Books/BookReading2.xaml" />
+                <mui:Link DisplayName="しおり3" Source="/Pages/Books/BookReading3.xaml" />
+                <mui:Link DisplayName="しおり4" Source="/Pages/Books/BookReading4.xaml" />
+                <mui:Link DisplayName="しおり5" Source="/Pages/Books/BookReading5.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="検索">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="ワーク1" Source="/Pages/Search/SearchPage.xaml" />
+                <mui:Link DisplayName="ワーク2" Source="/Pages/Search/SearchPage2.xaml" />
+                <mui:Link DisplayName="ワーク3" Source="/Pages/Search/SearchPage3.xaml" />
+                <mui:Link DisplayName="ワーク4" Source="/Pages/Search/SearchPage4.xaml" />
+                <mui:Link DisplayName="ワーク5" Source="/Pages/Search/SearchPage5.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="コンテンツ">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="聖地地図" Source="/Pages/Picture/PictureViewer.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <!--<mui:LinkGroup DisplayName="デバッグ">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="デバッグ" Source="/Pages/DebugPage.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>-->        
+        <mui:LinkGroup DisplayName="settings" GroupKey="settings">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="software" Source="/Pages/SettingsPage.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+    </mui:ModernWindow.MenuLinkGroups>
+
+    <mui:ModernWindow.TitleLinks>
+        <mui:Link DisplayName="settings" Source="/Pages/SettingsPage.xaml" />
+        <mui:Link DisplayName="help" Source="http://www.seisho.or.jp/category/about-rev3" />
+    </mui:ModernWindow.TitleLinks>
+
+</mui:ModernWindow>

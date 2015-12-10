@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AppearanceSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ThemeSource>/FirstFloor.ModernUI;component/Assets/ModernUI.Light.xaml</ThemeSource>
+  <FontSize>Large</FontSize>
+  <AccentColor>
+    <A>255</A>
+    <R>27</R>
+    <G>161</G>
+    <B>226</B>
+    <ScA>1</ScA>
+    <ScR>0.0109600937</ScR>
+    <ScG>0.356400132</ScG>
+    <ScB>0.7605245</ScB>
+  </AccentColor>
+</AppearanceSettings>

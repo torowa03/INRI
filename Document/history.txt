@@ -1,0 +1,8 @@
+変更履歴
+
+2015/4/1 VS2010版 BibleLite　　
+2015/5/1 VS2013版 BibleStandard
+2015/6/24 VS2015 RC版 INRI プロジェクト
+
+
+

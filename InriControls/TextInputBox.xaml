@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="Inri.Controls.TextInputBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:toolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit"
+             
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="300">
+    <UserControl.Resources>
+        <!--<BitmapImage x:Key="cancel" >/Inri.Controls;component/Resources/cancel.png</BitmapImage>-->
+        <BitmapImage x:Key="cancel" UriSource="./Resources/cancel.png" />
+        <DataTemplate x:Key="AutoCompleteBoxItemTemplate">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="{Binding Word}" Width="100" />
+                <Label Content="{Binding LastDate}" Language="ja-JP" FontStyle="Italic" Foreground="DarkGray" FontSize="10" VerticalAlignment="Center" Margin="2,2,2,2"/>
+            </StackPanel>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid Margin="2, 2, 3, 2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="AUTO" />
+        </Grid.ColumnDefinitions>
+        <toolkit:AutoCompleteBox x:Name="SearchBoxView"
+            InputMethod.PreferredImeState="On"
+            FontSize="16"
+            Text=""
+            ItemsSource="{Binding InputHistorySource}"
+            ItemFilter="{Binding InputWordFilter}"
+            ValueMemberPath="Word"
+            ItemTemplate="{StaticResource ResourceKey=AutoCompleteBoxItemTemplate}"
+            Grid.Column="0" BorderBrush="#FFE6D9D9"/>
+
+        <Button
+            Margin="3,1,1,1"
+            HorizontalAlignment="Right"
+            HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+            Click="SearchBoxViewButtonClick"
+            Width="25"
+            Grid.Column="1" FontFamily="Marlett" FontWeight="Bold">
+
+            <Button.Template>
+                <ControlTemplate>
+                    <Border HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Image Source="{StaticResource cancel}" Opacity="0.5"
+                        Width="20" Height="20" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</UserControl>
